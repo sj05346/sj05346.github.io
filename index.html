@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+  	<title>YOOJIN</title>
+  	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+  	<link rel="stylesheet" href="./css/style.css" />
+  	<link rel="stylesheet" href="./css/reset.css" />
+  	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  	<script>
+		$(function () {
+      		var $aside = $("aside");
+
+      		$aside.hide();
+
+      		//1. 가운데 이미지 창 좌표이동
+      		function asideMove() {
+
+        		var asideW = $aside.width();
+        		var asideH = $aside.height();
+
+        		$aside.css({
+          			marginTop: -asideH / 2,
+          			marginLeft: -asideW / 2
+        		})
+      		}
+
+      		asideMove();
+
+      		$(window).on("resize", function () {
+        		asideMove();
+      		});
+
+
+      		//2. 리스트에 매칭되는 이미지 노출
+			//제목에 해당하는 이미지를 images 폴더에 저장후 아래에 추가하세요.
+      		var arrPicture = [
+        		"mockup3.jpg",
+        		"ask_mockup.jpg",
+        		"picture_03.jpg",
+        		"picture_04.jpg",
+        		"website.png",
+				"website.png"
+      		];
+
+			var $li = $("section li");
+      		$li.on({
+        		"mouseenter click": function () {
+
+					var nowIdx = $li.index(this);
+
+					$aside.css({
+						backgroundImage: "url(images/" + arrPicture[nowIdx] + ")"
+          			}).fadeIn();
+
+          			return false;
+
+        		},
+				
+					"click" : function() {
+					// console.log($(this).context.id);
+					window.location.href = $(this).context.id;
+				}
+				,
+
+        		"mouseleave": function () {
+          			$aside.css({
+            			backgroundImage: ""
+          			}).hide();
+          			return false;
+        		},
+
+      		});
+    	});
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<header>
+			<h1><a href="./index.html">Yoojin Jung</a></h1>
+			<nav>
+				<ul class="gnb clearfix">
+					<li><a href="./index.html">Projects</a></li>
+					<li><a href="#">About</a></li>
+				</ul>
+			</nav>
+		</header>
+		<hr class="line">
+		<section>
+			<h2 class="sr-only">Selected Projects</h2>
+			<ol>
+				<li id="./rapid.html">
+					<a href="./rapid.html">
+						<h3>Rapid</h3>
+						<p>2019 <span>UI/UX</span></p>
+					</a>
+				</li>
+				<li id="./ask.html">
+					<a href="./ask.html">
+						<h3>Ask Gene</h3>
+						<p>2019 <span>UI/UX</span></p>
+					</a>
+				</li>
+				<li id="./audible.html">
+					<a href="./audible.html">
+						<h3>Audible</h3>
+						<p>2019 <span>Advertising</span></p>
+					</a>
+				</li>
+				<li>
+					<a href="./rapid.html">
+						<h3>Miller</h3>
+						<p>2019 <span>Advertising</span></p>
+					</a>
+				</li>
+				<li>
+					<a href="./rapid.html">
+						<h3>The North Face</h3>
+						<p>2019 <span> Advertising</span></p>
+					</a>
+				</li>
+				<li>
+					<a href="./rapid.html">
+						<h3>Casper</h3>
+						<p>2019 <span>UI/UX</span></p>
+					</a>
+				</li>
+			</ol>
+		</section>
+		<hr>
+		<footer>
+			<address class="bounce">
+				<span>
+					&copy;&nbsp;Yoojin Jung 2019&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;yooj1n05346@gmail.com
+				</span>
+			</address>
+		</footer>
+		<aside></aside>
+	</div>
+</body>
+
+</html>
