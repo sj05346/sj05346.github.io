@@ -45,7 +45,7 @@ section {
 
 .mainbanr {
 	height: 100vh;
-	background-image: url("../images/ask_mockup.jpg");
+	background-image: url("../images/fit_mockup.jpg");
 	background-position: center center;
 	background-size: cover;
 }
@@ -77,18 +77,14 @@ section {
 	font-weight: 600;
 }
 
-.container .persona img,.style img,.research img,.design img {
+.container .persona img,.insight img,.design img {
 	width:100%;
 }
 
-.container>.research>p>img {
-	margin-top:16px;
-}
-
-.container>.idea {
+.container>.screendesign {
 	text-align: center;
-	margin: 48px 0 48px 0;
-	
+	margin: 48px 0 0 0;
+	text-transform: uppercase;
 }
 
 footer {
