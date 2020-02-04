@@ -71,21 +71,21 @@ iframe {
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
 .txt1 {
-  font-family: 'helvetica';
+  font-family: 'aileron';
   font-size: 15px;
   color: #999999;
   line-height: 1.4;
 }
 
 .txt2 {
-  font-family: 'helvetica';
+  font-family: 'aileron';
   font-size: 15px;
   color: #57b846;
   line-height: 1.4;
 }
 
 .txt3 {
-  font-family: 'helvetica';
+  font-family: 'aileron';
   font-size: 15px;
   color: #57b846;
   line-height: 1.4;
@@ -103,7 +103,7 @@ iframe {
 
 .container-login100 {
   width: 100%; 
-	height:60vh;
+  height:60vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -112,7 +112,7 @@ iframe {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding:64px 0 0 0;
+  padding:88px 0 0 0;
   position: relative;
 }
 
@@ -152,7 +152,7 @@ iframe {
   width: 100%;
   background-color: #fff;
   position: relative;
-  top:16px;
+  top:24px;
   z-index: 1;
 }
 
@@ -167,7 +167,7 @@ iframe {
   display: block;
   width: 100%;
   height: 40px;
-  background: #ebebeb;
+  background: #E5E5E5;
   padding: 0 35px 0 35px;
 }
 
