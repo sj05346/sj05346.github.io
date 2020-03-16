@@ -1,0 +1,159 @@
+@charset "UTF-8";
+@keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+    } 
+} 
+
+.clearfix{*zoom:1;}
+.clearfix:after{display:block;clear:both;content:'';}
+.sr-only{position:absolute;left:-9999px;}
+
+body {
+    animation: fadeInAnimation ease 1s; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;
+    background-color: #f2f2f2;
+}
+
+header {
+	position: fixed;
+	top:0;
+	width: 100%;
+	height: 48px;
+	font-size: 18px;
+	font-family: 'helvetica';
+	background-color: #f2f2f2;
+	z-index: 100;
+}
+
+header>h1 {
+	position: absolute;
+	left: 32px;
+	top: 11px;
+}
+
+header>nav{
+	position: absolute;
+	top: 11px;
+	right: 32px;
+}
+
+header>nav>.gnb>li {float: left;}
+header>nav>.gnb>li:nth-child(1) {margin-right: 24px;}
+
+header a {
+	display: block;
+	padding: 6px;
+}
+
+header a:hover {color: #6237a0;}
+
+header+hr.line {
+	display: block;
+	position: fixed;
+	top: 42px;
+	width: 100%;
+	border-top: 1px solid #2c2f34;
+	border-bottom: none;
+}
+
+section {
+    color: #1e1e1e;
+    font-size: 18px;
+    line-height: 27px;
+    font-family: 'helvetica';
+}
+
+.mainbanr {
+	height: 100vh;
+	background-image: url("../images/miller_1.jpg");
+	background-position: center center;
+	background-size: cover;
+	text-indent: -9999px;
+}
+
+.mainbanr>h2 {text-indent: -9999px;}
+
+#content {
+    padding-top: 48px;
+	width: 80%;
+	margin: 0 auto;
+    padding: 0 0 152px 0;
+}
+
+#content h2,h2+p {
+    margin: 104px 0 104px 0;
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.column {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column>h3 {font-weight: 700;}
+
+.column>p {width: 60%;}
+
+.container>article>h3 {font-weight: 700;}
+
+.container>.persona>p>img,.research>p>img,.screen>p>img {width: 100%}
+
+.research p>img {
+    margin-top: 32px;
+	width: 100%;
+}
+
+span{color: lightgray;}
+
+footer{position: relative;}
+
+footer>address {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 48px;
+	background-color: #f2f2f2;
+	border-top: 1px solid #2c2f34;
+}
+
+footer>address>p {
+	position: absolute;
+	right: 32px;
+	bottom: 15px;
+	font-size: 16px;
+	font-family: 'helvetica';
+}
+
+aside {
+	display: none;
+	overflow: hidden;
+	position: fixed;
+	top: 50%;
+	right: 32px;
+	width: 56vw;
+	height: 64vh;
+
+	background-position: center right;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+aside > img {display: block;}
+ 
+@media screen and (max-width:902px){
+    #content {width: 88%;}
+}
+
+
+
+
+
+

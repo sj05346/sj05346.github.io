@@ -1,17 +1,31 @@
-@charset "utf-8";
+@charset "UTF-8";
+@keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+    } 
+} 
 
 .clearfix{*zoom:1;}
 .clearfix:after{display:block;clear:both;content:'';}
 .sr-only{position:absolute;left:-9999px;}
 
-body {background-color: #f2f2f2;}
+body {
+    animation: fadeInAnimation ease 1s; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;
+    background-color: #f2f2f2;
+}
 
 header {
 	position: fixed;
+	top:0;
 	width: 100%;
 	height: 48px;
-	font-size: 16px;
-	font-family: 'aileronRegular';
+	font-size: 18px;
+	font-family: 'helvetica';
 	background-color: #f2f2f2;
 	z-index: 100;
 }
@@ -19,12 +33,12 @@ header {
 header>h1 {
 	position: absolute;
 	left: 32px;
-	top: 14px;
+	top: 11px;
 }
 
-header>nav {
+header>nav{
 	position: absolute;
-	top: 14px;
+	top: 11px;
 	right: 32px;
 }
 
@@ -33,12 +47,10 @@ header>nav>.gnb>li:nth-child(1) {margin-right: 24px;}
 
 header a {
 	display: block;
-	padding: 4px;
+	padding: 6px;
 }
 
-header a:hover{
-	color:#8d8d8d;
-}
+header a:hover {color: #6237a0;}
 
 header+hr.line {
 	display: block;
@@ -50,16 +62,16 @@ header+hr.line {
 }
 
 section {
-	position: relative;
-	left: 24px;
-	top: 136px;
 	width: calc(100% - 56px);
+	margin: 144px auto 144px auto;
 }
 
 section>ol>li>a {
 	display: flex;
 	transition: all 0.2s ease-in-out;
 }
+
+section>ol>li>a:hover>h3{transform: scale(-1, 1);}
 
 section>ol:hover li>a {
     filter: blur(8px);
@@ -71,79 +83,42 @@ section>ol:hover li>a:hover {
 	opacity: 1;
 }
 
-section>ol>li>a>h3 {
-	margin-top: 28.8px;
+section>ol>li{
+	margin-bottom: 32px;
+	font-size: 8.8vmax;
+	font-family: 'helvetica';
+	line-height: 6.2vmax;
+}
+
+section>ol>li>a>h3{
 	font-weight: 600;
-	font-size: 8vmax;
-	font-family: 'aileronBold';
-	font-weight: bold;
-	line-height: 5.4vmax;
 	text-transform: uppercase;
 }
 
 section>ol>li>a>h3+p {
 	position: relative;
+	top:-5px;
 	left: 8px;
-	top: 30px;
-	height: 32px;
-	font-size: 16px;
-	line-height: 13px;
-	font-family: 'aileronRegular';
+	height: 18px;
+	font-size: 18px;
+	line-height: 16px;
 }
- 
-/*section>ol>li>a>h3+p>span {display: block;} */
 
-footer {
+footer{
+	position: fixed;
+	bottom: 0;
 	width: 100%;
 	height: 48px;
 	font-size: 16px;
-	font-family: 'aileronRegular';
-}
-
-footer>.bounce {
-	overflow: hidden;
-	position: relative;
-	height: 48px;
-	margin-top: 240px;
+	font-family: 'helvetica';
+	background-color: #f2f2f2;
 	border-top: 1px solid #2c2f34;
 }
 
-footer>.bounce>span {
+footer>address {
 	position: absolute;
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	padding-top:18px;
-	text-align: center;
-	/* Starting position */
-	-moz-transform:translateX(50%);
-	-webkit-transform:translateX(50%);	
-	transform:translateX(50%);
-	/* Apply animation to this element */	
-	-moz-animation: bouncing-text 15s linear infinite alternate;
-	-webkit-animation: bouncing-text 15s linear infinite alternate;
-	animation: bouncing-text 15s linear infinite alternate;
-}
-
-@-moz-keyframes bouncing-text {
-	0%   { -moz-transform: translateX(50%); }
-	100% { -moz-transform: translateX(-50%); }
-}
-@-webkit-keyframes bouncing-text {
-	0%   { -webkit-transform: translateX(50%); }
-	100% { -webkit-transform: translateX(-50%); }
-}
-@keyframes bouncing-text {
- 	0%   { 
-		-moz-transform: translateX(50%); /* Browser bug fix */
-		-webkit-transform: translateX(50%); /* Browser bug fix */
-		transform: translateX(50%); 		
- 	}
- 	100% {
-		-moz-transform: translateX(-50%); /* Browser bug fix */
-		-webkit-transform: translateX(-50%); /* Browser bug fix */
-		transform: translateX(-50%); 
-	}
+	right: 32px;
+	bottom: 15px;
 }
 
 aside {
@@ -152,40 +127,25 @@ aside {
 	position: fixed;
 	top: 50%;
 	right: 32px;
-	width: 50vw;
+	width: 56vw;
 	height: 64vh;
+    z-index: -1;
 
 	background-position: center right;
 	background-size: contain;
 	background-repeat: no-repeat;
+    
+    animation: fadeInAnimation ease 1s; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;
 }
 
 aside > img {display: block;}
-
+ 
 @media screen and (max-width:902px){
-	
-	section {
-		top: 104px;
-	}
-	
-	section p {
-		display: none;
-	}
-	
-	section>ol>li>a>h3 {
-		margin-top: 0px;
-		line-height: 8.7vmax;
-	}
-	
-	footer>.bounce {
-	overflow: hidden;
-	position: relative;
-	top: 88px;
-	height: 48px;
-	border-top: 1px solid #979797;
-	}
-	
+    section p {display: none;}
 }
+
 
 
 
