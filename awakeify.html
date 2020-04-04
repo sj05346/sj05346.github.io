@@ -26,28 +26,28 @@
        	<hr>
         <section id="content">
             <div class="column">
-                <h2>2019 <span>/ Advertising</span></h2>
-                <p>Awakeify<span> / Spotify</span></p>
+                <h2>2019 <span>Advertising</span></h2>
+                <p>Awakeify</p>
             </div>
         	<div class="container">
         		<article>
                     <div class="column">
                         <h3>Insight</h3>
                         <p>
-                            Every year over 6,000 people are killed after falling asleep at the wheel.
+							Every year <span class="marker-animation">over 6,000 people are killed</span> after falling asleep at the wheel.
                         </p>
                     </div>
                     <div class="column">
                         <h3>Idea</h3>
                         <p>
-                            When drivers drift over rumble strips, their phone's gyroscope sensor detects the vibrating pattern and alerts Spotify.
+							When drivers drift over rumble strips, their phone's gyroscope sensor <span class="marker-animation">detects the vibrating pattern and alerts Spotify.</span>
                         </p>
                     </div>
         		</article>
         		<hr />
                 <article class=" column image">
         			<div class="video">
-                <video width="100%" height="100%" src="./images/AWAKEIFY_3.mp4" controls></video>
+           				<video width="100%" height="100%" src="./images/AWAKEIFY.mp4" controls></video>
             		</div>
         		</article>
         	</div>
@@ -58,6 +58,23 @@
 		</footer>
 		<aside></aside>
 	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+	<script src="build/index.js"></script>
+	<script>
+		$('.marker-animation').markerAnimation();
+	</script>
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+  		_gaq.push(['_setAccount', 'UA-36251023-1']);
+  		_gaq.push(['_setDomainName', 'jqueryscript.net']);
+  		_gaq.push(['_trackPageview']);
+
+  		(function() {
+    		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  		})();
+	</script>
 </body>
 </html>
 
