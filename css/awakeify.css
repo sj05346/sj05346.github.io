@@ -73,7 +73,7 @@ section {
 .mainbanr>h2 {text-indent: -9999px;}
 
 #content {
-	width: 80%;
+	width: 92%;
 	margin: 0 auto;
     padding-bottom: 120px;
 }
@@ -92,33 +92,23 @@ section {
     line-height: 27px;
 }
 
-.column {
-    display: flex;
-    justify-content: space-between;
-}
-
-.column:nth-child(2){
-    margin-top: 32px;
-}
-
-.column>h3 {font-weight: 700;}
-
-.column>p {width: 64%;}
-
-.container>.image>p {
-	display: flex;
-    justify-content: space-between;
-    padding: 0 0 .8% 0;
-}
-
-.container>.image>p>img {width: 32.8%;}
-
 .container>article {margin-bottom: 32px;}
 
 .container>article p {
 	line-height: 32px;
 	font-weight: 100;
 }
+
+.column {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column:nth-child(2){margin-top: 32px;}
+
+.column>h3 {font-weight: 700;}
+
+.column>p {width: 64%;}
     
 footer>address {
 	position: absolute;

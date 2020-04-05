@@ -69,12 +69,17 @@ section {
 	margin: 120px auto 120px auto;
 }
 
+section>ol>li{
+	margin-bottom: 32px;
+	font-size: 8.8vmax;
+	font-family: 'helvetica';
+	line-height: 6.2vmax;
+}
+
 section>ol>li>a {
 	display: flex;
 	transition: all 0.2s ease-in-out;
 }
-
-/*section>ol>li>a:hover>h3 {transform: scale(-1, 1);}*/
 
 section>ol:hover li>a {
     filter: blur(8px);
@@ -84,13 +89,6 @@ section>ol:hover li>a {
 section>ol:hover li>a:hover {
     filter: blur(0);
 	opacity: 1;
-}
-
-section>ol>li{
-	margin-bottom: 32px;
-	font-size: 8.8vmax;
-	font-family: 'helvetica';
-	line-height: 6.2vmax;
 }
 
 section>ol>li>a>h3{
@@ -131,8 +129,8 @@ aside {
 	position: fixed;
 	top: 50%;
 	right: 32px;
-	width: 56vw;
-	height: 64vh;
+	width: 64vw;
+	height: 72vh;
     z-index: -1;
 
 	background-position: center right;
