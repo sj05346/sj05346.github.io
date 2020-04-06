@@ -100,7 +100,7 @@ section.profile img{width:100%;}
 section.about {width: 64%;}
 
 section.about>div>h2+div.wordCarousel {
-	height: 100px;
+	height: 96px;
 	overflow: hidden;
 }
 
@@ -171,7 +171,20 @@ aside > img {display: block;}
 
 @media screen and (max-width:902px){
 	
-	header,footer>address>p {font-size: 14px;}
+	@keyframes flip4 {
+		0% { margin-top: -192px; }
+		5% { margin-top: -144px; }
+		25% { margin-top: -144px; }
+		30% { margin-top: -96px; }
+		50% { margin-top: -96px; }
+		55% { margin-top: -48px; }
+		75% { margin-top: -48px; }
+		80% { margin-top: 0px; }
+		99.99% { margin-top: 0px; }
+		100% { margin-top: -144px; }
+	}
+	
+	header,footer>address>p {font-size: 16px;}
 	
 	header>nav>.gnb>li:nth-child(1) {margin-right: 4px;}
 	
@@ -180,6 +193,31 @@ aside > img {display: block;}
 	.column {display: block;}
 	
 	.column>section {width: 100%;}
+	
+	section.about>div>h2+div.wordCarousel {
+		height: 48px;
+		overflow: hidden;
+	}
+	
+	div.wordCarousel,.about p {
+		font-weight: 700;
+    	font-size: 24px;
+    	line-height: 24px;
+    	text-transform: uppercase;
+	}
+	
+	div.wordCarousel li {
+    	height: 24px;
+	    margin-bottom: 24px;
+	}
+	
+	p:nth-child(4) {
+	margin-top: 32px;
+	font-size: 18px;
+	font-weight: 100;
+    line-height: 27px;
+	text-transform: none;
+}
 }
 
 
