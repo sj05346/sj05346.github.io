@@ -53,7 +53,7 @@ header a {
 	padding: 6px;
 }
 
-header a:hover {color: #4f568a;}
+header a:hover {color: #21CF84;}
 
 section {
     color: #1e1e1e;
@@ -97,7 +97,10 @@ section {
     justify-content: space-between;
 }
 
-.column>h3 {font-weight: 700;}
+.column>h3 {
+	font-weight: 700;
+	text-transform: uppercase;
+}
 
 .column>p {width: 64%;}
 
