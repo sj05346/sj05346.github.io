@@ -171,19 +171,6 @@ aside > img {display: block;}
 
 @media screen and (max-width:902px){
 	
-	@keyframes flip4 {
-		0% { margin-top: -192px; }
-		5% { margin-top: -144px; }
-		25% { margin-top: -144px; }
-		30% { margin-top: -96px; }
-		50% { margin-top: -96px; }
-		55% { margin-top: -48px; }
-		75% { margin-top: -48px; }
-		80% { margin-top: 0px; }
-		99.99% { margin-top: 0px; }
-		100% { margin-top: -144px; }
-	}
-	
 	header,footer>address>p {font-size: 16px;}
 	
 	header>nav>.gnb>li:nth-child(1) {margin-right: 4px;}
@@ -217,7 +204,21 @@ aside > img {display: block;}
 	font-weight: 100;
     line-height: 27px;
 	text-transform: none;
-}
+ 	}
+	
+	@keyframes flip4 {
+		0% { margin-top: -192px; }
+		5% { margin-top: -144px; }
+		25% { margin-top: -144px; }
+		30% { margin-top: -96px; }
+		50% { margin-top: -96px; }
+		55% { margin-top: -48px; }
+		75% { margin-top: -48px; }
+		80% { margin-top: 0px; }
+		99.99% { margin-top: 0px; }
+		100% { margin-top: -144px; }
+	}
+	
 }
 
 
