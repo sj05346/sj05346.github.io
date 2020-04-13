@@ -133,7 +133,10 @@ div.contact>p {
 	text-transform: none;
 }
 
-div.contact>p:nth-child(2) {text-decoration-line: underline;}
+div.contact>p>a:link    {color:#21CF84; text-decoration:underline}
+div.contact>p>a:visited {color:#21CF84; text-decoration:underline}
+div.contact>p>a:hover   {color:#21CF84; text-decoration:underline}
+div.contact>p>a:active  {color:#21CF84; text-decoration:underline}
 
 footer>address {
 	position: absolute;
