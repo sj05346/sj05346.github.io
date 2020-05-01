@@ -1,0 +1,223 @@
+@charset "UTF-8";
+@keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+    } 
+} 
+
+.clearfix{*zoom:1;}
+.clearfix:after{display:block;clear:both;content:'';}
+.sr-only{position:absolute;left:-9999px;}
+
+.column {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column>h3 {
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.column>p,div.column>ul {width: 64%;}
+
+body {
+	font-family: 'helvetica';
+    background-color: #f2f2f2;
+	animation: fadeInAnimation ease 1.1s; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;
+}
+
+body>div#wrap{
+	display: block;
+	overflow: hidden;
+	position: relative;
+	min-height: 100vh; /* will cover the 100% of viewport */
+	padding-bottom: 48px; /* height of your footer */
+}
+
+/*header{border-bottom: 1px solid #2c2f34;}*/
+
+header>nav {
+	width: calc(96% + 12px);
+	height: 48px;
+	margin: 0 auto;
+	font-size: 18px;
+	font-weight: 100;
+}
+
+header>nav>ul.gnb {position:relative;}
+	
+header>nav>ul.gnb>li {
+	float: left;
+	margin-top: 10px;
+}
+
+header>nav>ul.gnb>li:nth-child(2) {
+	position: absolute;
+	right:0;
+}
+
+header a {
+	border: 1px solid #000;
+	border-radius: 2em;
+	box-sizing: border-box;
+	display: block;
+	padding: 7px;
+}
+
+header a:hover {
+	color: #f2f2f2;
+	background-color: #121212;
+}
+
+section {
+    color: #1e1e1e;
+    font-size: 18px;
+    line-height: 27px;
+    font-family: 'helvetica';
+}
+
+.mainbanr {
+	height: 100vh;
+	background-image: url("../images/insomnia_banner.jpg");
+	background-position: center center;
+	background-size: cover;
+	text-indent: -9999px;
+}
+
+.mainbanr>h2 {text-indent: -9999px;}
+
+#content {
+	width: 96%;
+	margin: 0 auto;
+}
+
+#content h2,h2+p {
+    margin: 104px 0 104px 0;
+	font-weight: 600;
+    font-size: 48px;
+    line-height: 48px;
+    text-transform: uppercase;
+}
+
+.container>article {margin-bottom: 104px;}
+
+.container>article p,article li {
+	line-height: 32px;
+	font-weight: 100;
+}
+
+article li {list-style-type: disc;}
+article li:nth-child(1) { margin-bottom: 12px}
+
+.container>article.center{
+	margin-bottom: 0;
+	text-transform: uppercase;
+}
+
+.container>article>h3 {
+	font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.container>.persona>p>img,.research>p>img,.screen>p>img {width: 100%;}
+
+.container>.research>p>img,.screen>p:nth-child(3)>img {margin-top: 16px;}
+
+.container>.description p>img {
+    margin-top: 16px;
+	width: 100%;
+}
+
+footer{
+	position: absolute;
+ 	bottom: 0;
+	width:100%;
+	height: 48px;
+	font-weight: 100;
+	font-size: 18px;
+	border-top: 1px solid #2c2f34;
+}
+
+footer>div {
+	position: relative;
+	width: 96%;
+	margin: 0 auto;
+}
+	
+footer>div>span {
+	float: left;
+	margin-top: 8px;
+}
+
+footer>div>span:nth-child(2) {
+	position: absolute;
+	right:0;
+	margin-top: 16px;
+}
+
+footer a {
+	border: 1px solid #000;
+	border-radius: 2em;
+	box-sizing: border-box;
+	display: block;
+	padding: 7px;
+}
+
+footer a:hover {
+	color: #f2f2f2;
+	background-color: #121212;
+}
+
+aside {
+	display: none;
+	overflow: hidden;
+	position: fixed;
+	top: 50%;
+	right: 32px;
+	width: 56vw;
+	height: 64vh;
+
+	background-position: center right;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+aside > img {display: block;}
+
+@media screen and (max-width:902px){
+	
+	header,footer>address>p {font-size: 16px;}
+	
+	header>nav>.gnb>li:nth-child(1) {margin-right: 4px;}
+	
+	#content {width: 96%;}
+	
+	.column {display: block;}
+	
+	.column>p,div.column>ul {width: 100%;}
+	
+	.column>h3 { margin-bottom: 12px;}
+    
+    .container>.persona>p {display: block;}
+    
+    .container>.persona>p>img {
+        display: block;
+        width: 100%;
+    }
+    
+    .container>.persona>p>img:nth-child(1) {margin-bottom: 32px;}
+	
+}
+
+
+
+
+
+
+

@@ -16,7 +16,9 @@ ul,ol,li,dl{list-style:none}
 blockquote,q{quotes:none}
 blockquote:before, blockquote:after, q:before, q:after{content:'';content:none}
 a,a:link,a:hover,a:active {text-decoration:none}
-p,h1,h2,h3,em,i,address{font-style:normal;font-weight:normal;font-size:100%;}
+/*p,h1,h2,h3,em,i,address{font-style:normal;font-weight:normal;font-size:100%;}*/
+h1,h2,h3,em,i{font-style:normal;font-weight:normal;font-size:100%;}
+address{font-style:normal;font-size:100%;}
 table{border-collapse:collapse; border-spacing:0}
 img,fieldset{border:0}
 hr,legend,caption{display:none}

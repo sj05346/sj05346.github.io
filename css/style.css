@@ -13,71 +13,86 @@
 .sr-only{position:absolute;left:-9999px;}
 
 body {
-	position: relative;
 	font-family: 'helvetica';
-    animation: fadeInAnimation ease 1.1s; 
+    background-color: #f2f2f2;
+	animation: fadeInAnimation ease 1.1s; 
     animation-iteration-count: 1; 
     animation-fill-mode: forwards;
-    background-color: #f2f2f2;
 }
 
 body>div#wrap{
-	min-height: 100vh; /* will cover the 100% of viewport */
-	overflow: hidden;
 	display: block;
+	overflow: hidden;
 	position: relative;
+	min-height: 100vh; /* will cover the 100% of viewport */
 	padding-bottom: 48px; /* height of your footer */
 }
 
-header {
-	position: relative;
-	width: calc(92% + 12px);
+/*header{border-bottom: 1px solid #2c2f34;}*/
+
+header>nav {
+	width: calc(96% + 12px);
 	height: 48px;
 	margin: 0 auto;
 	font-size: 18px;
+	font-weight: 100;
 }
 
-header>h1,nav {
-	display: inline-block;
-	position: absolute;
-	top: 10px;
+header>nav>ul.gnb {position:relative;}
+	
+header>nav>ul.gnb>li {
+	float: left;
+	margin-top: 10px;
 }
-	
-header>nav {right:0;}
-	
-header>nav>.gnb>li {float: left;}
-	
-header>nav>.gnb>li:nth-child(1) {margin-right: 16px;}
-	
+
+header>nav>ul.gnb>li:nth-child(2) {
+	position: absolute;
+	right:0;
+}
+
 header a {
+	border: 1px solid #000;
+	border-radius: 2em;
+	box-sizing: border-box;
 	display: block;
-	padding: 6px;
+	padding: 7px;
 }
 
-header a:hover {color: #21CF84;}
-
-header+hr.line {
-	display: block;
-	position: absolute;
-	top: 42px;
-	width: 100%;
-	border-top: 1px solid #2c2f34;
+header a:hover {
+	color: #f2f2f2;
+	background-color: #121212;
 }
 
 section {
-	width: 92%;
-	margin: 120px auto 120px auto;
+	margin-top: 4px;
+	text-transform: uppercase;
+	border-top: 1px solid #2c2f34;
+}
+
+section>h2 {
+	width: 96%;
+	margin: 24px auto 0;
+	color: #000;
+	font-weight: 100;
+	font-size: 18px;
+	/*text-align: center;*/
+}
+
+section>ol {
+	width: calc(96% + 16px);
+	margin: 40px auto 0;
 }
 
 section>ol>li{
 	margin-bottom: 32px;
+	font-weight: 600;
 	font-size: 8.8vmax;
-	font-family: 'helvetica';
 	line-height: 6.2vmax;
+	font-family: 'helvetica';
 }
 
 section>ol>li>a {
-	display: flex;
+	display: block;
 	transition: all 0.2s ease-in-out;
 }
 
@@ -91,20 +106,6 @@ section>ol:hover li>a:hover {
 	opacity: 1;
 }
 
-section>ol>li>a>h3{
-	font-weight: 600;
-	text-transform: uppercase;
-}
-
-section>ol>li>a>h3+p {
-	position: relative;
-	top:-5px;
-	left: 8px;
-	height: 18px;
-	font-size: 18px;
-	line-height: 16px;
-}
-
 footer>address {
 	position: absolute;
  	bottom: 0;
@@ -116,8 +117,9 @@ footer>address {
 footer>address>p {
 	position: relative;
 	top: 16px;
-	width: 92%;
+	width: 96%;
 	margin: 0 auto;
+	font-weight: 100;
 	font-size: 16px;
 	font-family: 'helvetica';
 	text-align: right;
