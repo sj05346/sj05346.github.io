@@ -8,6 +8,72 @@
   	<link rel="shortcut icon" href="images/favicon.ico">
 	<link rel="stylesheet" href="css/reset.css" />
 	<link rel="stylesheet" href="css/style.css" />
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script>
+		$(function () {
+			var $aside = $("aside");
+
+			$aside.hide();
+
+			//1. 가운데 이미지 창 좌표이동
+			function asideMove() {
+
+				var asideW = $aside.width();
+				var asideH = $aside.height();
+
+				$aside.css({
+					marginTop: -asideH / 2,
+					marginLeft: -asideW / 0
+				})
+			}
+
+			asideMove();
+
+			$(window).on("resize", function () {
+				asideMove();
+			});
+
+
+			//2. 리스트에 매칭되는 이미지 노출
+			var arrPicture = [
+				"insomnia_banner.jpg",
+				"ask_banner.jpg",
+				"rapid_banner.jpg",
+				"Miller_1.jpg",
+				"AWAKEIFY.gif",
+				"front.png"
+			];
+
+			var $li = $("section li");
+			$li.on({
+				"mouseenter click": function () {
+
+					var nowIdx = $li.index(this);
+
+					$aside.css({
+						backgroundImage: "url(images/" + arrPicture[nowIdx] + ")"
+					}).fadeIn();
+
+					return false;
+
+				},
+
+					"click" : function() {
+					// console.log($(this).context.id);
+					window.location.href = $(this).context.id;
+				}
+				,
+
+				"mouseleave": function () {
+					$aside.css({
+						backgroundImage: ""
+					}).hide();
+					return false;
+				},
+
+			});
+		});
+	</script>
 </head>
 <body>
 	<div id="wrap">
@@ -21,23 +87,7 @@
 			</nav>
 		</header>
 		<hr />
-		<section class="rotate">
-			<div class="gallery">
-				<div id="carousel">
-					<figure><img src="./images/rapid_banner.jpg" alt=""></figure>
-					<figure><img src="./images/awakeify_banr.png" alt=""></figure>
-					<figure><img src="./images/insomnia_motivation.gif" alt=""></figure>
-					<figure><img src="./images/miller_thumb.jpg" alt=""></figure>
-					<figure><img src="./images/animal_thumb.jpg" alt=""></figure>
-					<figure><img src="./images/ask_2.jpg" alt=""></figure>
-					<figure><img src="./images/animal_thumb_2.jpg" alt=""></figure>
-					<figure><img src="./images/insomnia_research_1.jpg" alt=""></figure>
-					<figure><img src="./images/wwf_thumb.jpg" alt=""></figure>
-					<figure><img src="./images/rapid_banner.jpg" alt=""></figure>
-				</div>
-			</div>
-		</section>
-		<hr />
+		<!--
 		<section>
 			<ol>
 				<li><h2>UI/UX</h2></li>
@@ -47,27 +97,57 @@
 				<li id="./Ask%20Gene.html">
 					<a href="./Ask%20Gene.html">Ask Gene</a>
 				</li>
+				<li id="./Rapid.html">
+					<a href="./Rapid.html">Rapid</a>
+				</li>
+				<li><h2>Advertising</h2></li>
+				<li id="./Miller.html">
+					<a href="./Miller.html">Miller</a>
+				</li>
+				<li id="./Spotify.html">
+					<a href="./Spotify.html">Spotify</a>
+				</li>
+				<li id="./rapid.html">
+					<a href="./rapid.html">WWF</a>
+				</li>
+			</ol>
+		</section>
+		-->
+		<section>
+			<h2>UI/UX</h2>
+			<ol>
+				<li id="./Endsomnia.html">
+					<a href="./Endsomnia.html">Endsomnia</a>
+				</li>
+				<li id="./Ask%20Gene.html">
+					<a href="./Ask%20Gene.html">Ask Gene</a>
+				</li>
 				<li id="./mechanic.html">
 					<a href="./mechanic.html">Rapid</a>
 				</li>
-				<li class="noblur"><h2>Advertising</h2></li>
+			</ol>
+		</section>
+		<hr />
+		<section>
+			<h2>Advertising</h2>
+			<ol>
 				<li id="./mgd.html">
 					<a href="./mgd.html">Miller</a>
 				</li>
 				<li id="./Spotify.html">
-					<a href="./Spotify.html">Awakeify</a>
+					<a href="./Spotify.html">Spotify</a>
 				</li>
 				<li id="./WWF.html">
 					<a href="./WWF.html">WWF</a>
 				</li>
 			</ol>
 		</section>
-		<hr />
 		<footer>
 			<address>
 				<p>&copy;Designed by Yoojin Jung</p>
 			</address>
 		</footer>
+		<aside></aside>
 	</div>
 </body>
 </html>
