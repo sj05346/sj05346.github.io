@@ -8,130 +8,93 @@
   	<link rel="shortcut icon" href="images/favicon.ico">
 	<link rel="stylesheet" href="css/reset.css" />
 	<link rel="stylesheet" href="css/style.css" />
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	<script>
-		$(function () {
-			var $aside = $("aside");
-
-			$aside.hide();
-
-			//1. 가운데 이미지 창 좌표이동
-			function asideMove() {
-
-				var asideW = $aside.width();
-				var asideH = $aside.height();
-
-				$aside.css({
-					marginTop: -asideH / 2,
-					marginLeft: -asideW / 0
-				})
-			}
-
-			asideMove();
-
-			$(window).on("resize", function () {
-				asideMove();
-			});
-
-
-			//2. 리스트에 매칭되는 이미지 노출
-			var arrPicture = [
-				"insomnia_banner.jpg",
-				"rapid_banner.jpg",
-				"ask_banner.jpg",
-				"AWAKEIFY.gif"
-			];
-
-			var $li = $("section li");
-			$li.on({
-				"mouseenter click": function () {
-
-					var nowIdx = $li.index(this);
-
-					$aside.css({
-						backgroundImage: "url(images/" + arrPicture[nowIdx] + ")"
-					}).fadeIn();
-
-					return false;
-
-				},
-
-					"click" : function() {
-					// console.log($(this).context.id);
-					window.location.href = $(this).context.id;
-				}
-				,
-
-				"mouseleave": function () {
-					$aside.css({
-						backgroundImage: ""
-					}).hide();
-					return false;
-				},
-
-			});
-		});
-	</script>
 </head>
 <body>
 	<div id="wrap">
 		<header>
-			<div>
-				<h1 class =sr-only>Welcome</h1>
-				<p>Yoojin Jung</p>
-				<p>yooj1n05346@gmail.com</p>
+			<div id="content">
+				<h1>Yoojin Jung</h1>
 				<nav>
 					<ul class="gnb clearfix">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="#">About</a></li>
+						<li>Portfolio<span>&darr;</span></li>
 					</ul>
 				</nav>
 			</div>
 		</header>
 		<hr />
-		<section>
-			<h2>
+		<div class="draw">
+			<canvas id='canvas'></canvas>
+			<p><span id='info'>Click and drag!</span></p>
+		</div>
+		<!--
+		<section class="background">
+			<h2 id="content">
 				Yoojin is a designer based in New York City pursuing BFA Advertising at School of Visual Arts. Her eager goes toward Experience Design where she focuses on visualizing purposeful user experience.<br><span>&darr;</span>
 			</h2>
+		</section>
+		-->
+		<hr />
+		<section>
 			<ol>
 				<li id="./endsomnia.html">
-					<a href="./endsomnia.html">
+					<a id="content" href="./endsomnia.html">
 						<p>01/<br>UI/UX</p>
+						<p>Endsomnia</p>
 						<p>Endsomnia</p>
 					</a>
 				</li>
 				<li id="./rapid.html">
-					<a href="./rapid.html">
+					<a id="content" href="./rapid.html">
 						<p>02/<br>UI/UX</p>
 						<p>Rapid</p>
+						<p>Endsomnia</p>
 					</a>
 				</li>
 				<li id="./askgene.html">
-					<a href="./askgene.html">
+					<a id="content" href="./askgene.html">
 						<p>03/<br>UI/UX</p>
 						<p>Ask Gene</p>
+						<p>Endsomnia</p>
 					</a>
 				</li>
 				<li id="./awakeify.html">
-					<a href="./awakeify.html">
+					<a id="content" href="./awakeify.html">
 						<p>04/<br>Advertising</p>
 						<p>Awakeify</p>
+						<p>Endsomnia</p>
 					</a>
 				</li>
 			</ol>
 		</section>
 		<hr />
 		<footer>
-			<address>
-				<p>&copy;Designed by Yoojin Jung</p>
-			</address>
+			<div id="content">
+				<address><p>&copy;Designed by Yoojin Jung</p></address>
+				<p><a href="mailto:yooj1n05346@gmail.com">Contact : Yoojin05346@gmail.com</a></p>
+			</div>
 		</footer>
-		<aside></aside>
 	</div>
+	<!--
+	<div style="opacity:0.1;">
+	  	<div style="height:100vh; width: calc(100% - 32px); margin: 0 auto;">
+			<div class="gridcontent" style="border-left:1px solid #000000;"></div>
+			<div class="gridcontent"></div>
+			<div class="gridcontent"></div>
+			<div class="gridcontent"></div>
+			<div class="gridcontent"></div>
+			<div class="gridcontent"></div>
+			<div class="gridcontent"></div>
+			<div class="gridcontent"></div>
+			<div class="gridcontent"></div>
+			<div class="gridcontent"></div>
+			<div class="gridcontent"></div>
+			<div class="gridcontent"></div>
+	  	</div>
+	</div>
+	-->
+	<script  src="./script.js"></script>
 </body>
 </html>
-
-
 
 
 
