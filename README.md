@@ -7,3 +7,5 @@ Yoojin is a designer based in New York City pursuing BFA Advertising at School o
 ©Designed by Yoojin Jung
 
 Contact : Yoojin05346@gmail.com
+
+whiting~
