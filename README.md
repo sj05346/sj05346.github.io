@@ -8,4 +8,4 @@ Yoojin is a designer based in New York City pursuing BFA Advertising at School o
 
 Contact : Yoojin05346@gmail.com
 
-whiting~
+I'll always Bo9me
