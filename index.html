@@ -2,82 +2,120 @@
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<title>YOOJIN JUNG</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-  	<link rel="shortcut icon" href="images/favicon.ico">
+	<title>YOOJIN JUNG</title>
 	<link rel="stylesheet" href="css/reset.css" />
 	<link rel="stylesheet" href="css/style.css" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<link rel='stylesheet' href='https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.css'>
 </head>
 <body>
 	<div id="wrap">
 		<header>
-			<div id="content">
-				<h1>Yoojin Jung</h1>
-				<nav>
-					<ul class="gnb clearfix">
-						<li>Portfolio<span>&darr;</span></li>
-					</ul>
-				</nav>
-			</div>
+			<h1>Yoojin Jung</h1>
+			<nav>
+				<ul class="gnb clearfix">
+					<li><a class="home" href="./index.html">Work</a></li>
+					<li><a class="about" href="#">Resume</a></li>
+				</ul>
+			</nav>
 		</header>
 		<hr />
-		<div class="draw">
-			<canvas id='canvas'></canvas>
-			<p><span id='info'>Click and drag!</span></p>
-		</div>
-		<!--
-		<section class="background">
-			<h2 id="content">
-				Yoojin is a designer based in New York City pursuing BFA Advertising at School of Visual Arts. Her eager goes toward Experience Design where she focuses on visualizing purposeful user experience.<br><span>&darr;</span>
-			</h2>
+		<section class="bio item" data-aos="fade-up" data-aos-anchor-placement="top-center">
+			<h2>Hi, I'm Yoojin</h2>
+			<p>
+				I'm a designer based in New York, focusing on digital product design and art direction.
+			</p>
 		</section>
-		-->
 		<hr />
-		<section>
+		<section class="project">
 			<ol>
-				<li id="./endsomnia.html">
-					<a id="content" href="./endsomnia.html">
-						<p>01/<br>UI/UX</p>
-						<p>Endsomnia</p>
-						<p>Endsomnia</p>
-					</a>
-				</li>
-				<li id="./rapid.html">
-					<a id="content" href="./rapid.html">
-						<p>02/<br>UI/UX</p>
-						<p>Rapid</p>
-						<p>Endsomnia</p>
-					</a>
-				</li>
-				<li id="./askgene.html">
-					<a id="content" href="./askgene.html">
-						<p>03/<br>UI/UX</p>
-						<p>Ask Gene</p>
-						<p>Endsomnia</p>
-					</a>
-				</li>
-				<li id="./awakeify.html">
-					<a id="content" href="./awakeify.html">
-						<p>04/<br>Advertising</p>
-						<p>Awakeify</p>
-						<p>Endsomnia</p>
-					</a>
-				</li>
+        		<li class="pack item" data-aos="fade-up" data-aos-anchor-placement="top-center">
+        			<a href="./endsomnia.html">
+        				<ul>
+        					<li class="pht">
+        						<img src="./images/endsomnia_banner.png" alt="">
+        					</li>
+       						<li class="tit">Endsomnia</li>
+       						<li class="tip">Digital Product Design</li>
+        				</ul>
+        			</a>
+        		</li>
+        		<li class="pack item" data-aos="fade-up" data-aos-anchor-placement="top-center">
+        			<a href="./rapid.html">
+        				<ul>
+        					<li class="pht">
+        						<img src="./images/rapid_banner.png" alt="">
+        					</li>
+       						<li class="tit">Papid</li>
+       						<li class="tip">Digital Product Design</li>
+        				</ul>
+        			</a>
+        		</li>
+        		<li class="pack item" data-aos="fade-up" data-aos-anchor-placement="top-center">
+        			<a href="./password.html">
+        				<ul>
+        					<li class="pht">
+        						<img src="./images/studio_banner.png" alt="">
+        					</li>
+       						<li class="tit">Studio 502</li>
+       						<li class="tip">Digital Product Design, Front end engineer</li>
+        				</ul>
+        			</a>
+        		</li>
+        		<li class="pack item" data-aos="fade-up" data-aos-anchor-placement="top-center">
+        			<a href="./password.html">
+        				<ul>
+        					<li class="pht">
+        						<img src="./images/fit_banner.png" alt="">
+        					</li>
+       						<li class="tit">The Fit Life</li>
+       						<li class="tip">Digital Product Design</li>
+        				</ul>
+        			</a>
+        		</li>
+        		<li class="pack item" data-aos="fade-up" data-aos-anchor-placement="top-center">
+        			<a href="./music_awakening.html">
+        				<ul>
+        					<li class="pht">
+        						<img src="./images/awakeify_banner.png" alt="">
+        					</li>
+       						<li class="tit">Music Awakening</li>
+       						<li class="tip">Digital Product Design</li>
+        				</ul>
+        			</a>
+        		</li>
 			</ol>
 		</section>
 		<hr />
-		<footer>
-			<div id="content">
-				<address><p>&copy;Designed by Yoojin Jung</p></address>
-				<p><a href="mailto:yooj1n05346@gmail.com">Contact : Yoojin05346@gmail.com</a></p>
+		<footer class="clearfix">
+			<div>
+				<h5>Credits</h5>
+				<p>&copy; 2020 Designed and handcoded by Yoojin Jung</p>
+			</div>
+			<div>
+				<h5>Contact</h5>
+				<ul>
+					<li><a href="#">yooj1n05346@gmail.com</a></li>
+				</ul>
+			</div>
+			<div>
+				<h5>Quick Links</h5>
+				<nav>
+					<ul class="gnb clearfix">
+						<li><a class="home" href="./index.html">Work</a></li>
+						<li><a class="about" href="#">Resume</a></li>
+					</ul>
+				</nav>
 			</div>
 		</footer>
 	</div>
+	<script src='https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.js'></script>
+	<script  src="./js/scrollanimation.js"></script>
 	<!--
-	<div style="opacity:0.1;">
-	  	<div style="height:100vh; width: calc(100% - 32px); margin: 0 auto;">
-			<div class="gridcontent" style="border-left:1px solid #000000;"></div>
+	<div style="opacity:0.1;" id="grid-system">
+		<div style="height:100vh; width: calc(92% + 30px);; margin: 0 auto; border-left: 1px solid #000;">
 			<div class="gridcontent"></div>
 			<div class="gridcontent"></div>
 			<div class="gridcontent"></div>
@@ -89,27 +127,9 @@
 			<div class="gridcontent"></div>
 			<div class="gridcontent"></div>
 			<div class="gridcontent"></div>
-	  	</div>
+			<div class="gridcontent"></div>
+		</div>
 	</div>
 	-->
-	<script  src="./script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
